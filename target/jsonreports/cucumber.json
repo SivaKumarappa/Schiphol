@@ -1,0 +1,240 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-09-19T10:05:32.903Z",
+        "line": 5,
+        "name": "To retrieve list of all countries as destination Schipol and sort them.",
+        "description": "",
+        "id": "end-to-end-testing-for-flight-apis;to-retrieve-list-of-all-countries-as-destination-schipol-and-sort-them.",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5481793700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "As am an authorized user",
+            "match": {
+              "location": "com.flights.stepdefinitions.FlightAPISteps.as_am_an_authorized_user()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 516727700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I search for all countries and city combinations as destination Schipol",
+            "match": {
+              "location": "com.flights.stepdefinitions.FlightAPISteps.i_search_for_all_countries_and_city_combinations_as_destination_Schipol()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 667800000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Sort them by country in ascending order",
+            "match": {
+              "location": "com.flights.stepdefinitions.FlightAPISteps.sort_them_by_country_in_ascending_order()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10992300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "verify results contains city \"Sydney\" and country \"Australia\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sydney\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"Australia\"",
+                  "offset": 50
+                }
+              ],
+              "location": "com.flights.stepdefinitions.FlightAPISteps.verify_results_contains_city_and_country(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-09-19T10:05:40.076Z",
+        "line": 11,
+        "name": "To retrieve list of IATA and City for country \"Australia\"",
+        "description": "",
+        "id": "end-to-end-testing-for-flight-apis;to-retrieve-list-of-iata-and-city-for-country-\"australia\"",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 199814700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "As am an authorized user",
+            "match": {
+              "location": "com.flights.stepdefinitions.FlightAPISteps.as_am_an_authorized_user()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 336003900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I search for all countries and city combinations as destination Schipol",
+            "match": {
+              "location": "com.flights.stepdefinitions.FlightAPISteps.i_search_for_all_countries_and_city_combinations_as_destination_Schipol()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 23984000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "It should list out all IATA codes and destination city for country \"Australia\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Australia\"",
+                  "offset": 67
+                }
+              ],
+              "location": "com.flights.stepdefinitions.FlightAPISteps.it_should_list_out_all_iata_codes_and_destination_city_for_country(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-09-19T10:05:40.673Z",
+        "line": 16,
+        "name": "Retrieve and validate IATA codes for flights leaving Schiphol today",
+        "description": "",
+        "id": "end-to-end-testing-for-flight-apis;retrieve-and-validate-iata-codes-for-flights-leaving-schiphol-today",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 209869400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "As am an authorized user",
+            "match": {
+              "location": "com.flights.stepdefinitions.FlightAPISteps.as_am_an_authorized_user()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 394750200,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Access the API and retrieve data for all flights leaving Schiphol today",
+            "match": {
+              "location": "com.flights.stepdefinitions.FlightAPISteps.access_the_API_and_retrieve_data_for_all_flights_leaving_Schiphol_today()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 489365700,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "print the IATA code,destination and time of schedule departure",
+            "match": {
+              "location": "com.flights.stepdefinitions.FlightAPISteps.print_the_IATA_code_destination_and_time_of_schedule_departure()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 346785300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Verify there is an IATA code for each flight",
+            "match": {
+              "location": "com.flights.stepdefinitions.FlightAPISteps.verify_there_is_an_IATA_code_for_each_flight()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-09-19T10:05:42.132Z",
+        "line": 22,
+        "name": "Verify user access with INVALID key",
+        "description": "",
+        "id": "end-to-end-testing-for-flight-apis;verify-user-access-with-invalid-key",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 999700,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "As am an INVALID authorized user",
+            "match": {
+              "location": "com.flights.stepdefinitions.FlightAPISteps.as_am_an_INVALID_authorized_user()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 223861900,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I access the API to retrieve data for all flights leaving Schiphol today",
+            "match": {
+              "location": "com.flights.stepdefinitions.FlightAPISteps.i_access_the_API_to_retrieve_data_for_all_flights_leaving_Schiphol_today()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "Access should be Forbidden",
+            "match": {
+              "location": "com.flights.stepdefinitions.FlightAPISteps.access_should_be_Forbidden()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "End to End Testing for Flight APIs",
+    "description": "Description: The purpose of these tests are to cover Flight_API functionalities",
+    "id": "end-to-end-testing-for-flight-apis",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/flightapi.feature",
+    "tags": []
+  }
+]

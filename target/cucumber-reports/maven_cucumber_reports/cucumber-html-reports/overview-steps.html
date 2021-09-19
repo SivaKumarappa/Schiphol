@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Schiphol</td>
+        <td>1</td>
+      <td>19 Sep 2021, 15:43</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.flights.stepdefinitions.FlightAPISteps.access_should_be_Forbidden()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flights.stepdefinitions.FlightAPISteps.access_the_API_and_retrieve_data_for_all_flights_leaving_Schiphol_today()</td>
+              <td>1</td>
+              <td class="duration" data-value="394750200">0.394</td>
+              <td class="duration" data-value="394750200">0.394</td>
+              <td class="duration" data-value="394750200">0.394</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flights.stepdefinitions.FlightAPISteps.as_am_an_INVALID_authorized_user()</td>
+              <td>1</td>
+              <td class="duration" data-value="999700">0.000</td>
+              <td class="duration" data-value="999700">0.000</td>
+              <td class="duration" data-value="999700">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flights.stepdefinitions.FlightAPISteps.as_am_an_authorized_user()</td>
+              <td>3</td>
+              <td class="duration" data-value="1963825933">1.963</td>
+              <td class="duration" data-value="1963825933">5.481</td>
+              <td class="duration" data-value="5891477800">5.891</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flights.stepdefinitions.FlightAPISteps.i_access_the_API_to_retrieve_data_for_all_flights_leaving_Schiphol_today()</td>
+              <td>1</td>
+              <td class="duration" data-value="223861900">0.223</td>
+              <td class="duration" data-value="223861900">0.223</td>
+              <td class="duration" data-value="223861900">0.223</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flights.stepdefinitions.FlightAPISteps.i_search_for_all_countries_and_city_combinations_as_destination_Schipol()</td>
+              <td>2</td>
+              <td class="duration" data-value="426365800">0.426</td>
+              <td class="duration" data-value="426365800">0.516</td>
+              <td class="duration" data-value="852731600">0.852</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flights.stepdefinitions.FlightAPISteps.it_should_list_out_all_iata_codes_and_destination_city_for_country(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="23984000">0.023</td>
+              <td class="duration" data-value="23984000">0.023</td>
+              <td class="duration" data-value="23984000">0.023</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flights.stepdefinitions.FlightAPISteps.print_the_IATA_code_destination_and_time_of_schedule_departure()</td>
+              <td>1</td>
+              <td class="duration" data-value="489365700">0.489</td>
+              <td class="duration" data-value="489365700">0.489</td>
+              <td class="duration" data-value="489365700">0.489</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flights.stepdefinitions.FlightAPISteps.sort_them_by_country_in_ascending_order()</td>
+              <td>1</td>
+              <td class="duration" data-value="667800000">0.667</td>
+              <td class="duration" data-value="667800000">0.667</td>
+              <td class="duration" data-value="667800000">0.667</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flights.stepdefinitions.FlightAPISteps.verify_results_contains_city_and_country(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="10992300">0.010</td>
+              <td class="duration" data-value="10992300">0.010</td>
+              <td class="duration" data-value="10992300">0.010</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flights.stepdefinitions.FlightAPISteps.verify_there_is_an_IATA_code_for_each_flight()</td>
+              <td>1</td>
+              <td class="duration" data-value="346785300">0.346</td>
+              <td class="duration" data-value="346785300">0.346</td>
+              <td class="duration" data-value="346785300">0.346</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>11</td>
+            <td>14</td>
+            <td class="duration">0.635</td>
+            <td class="duration">5.891</td>
+            <td class="duration">8.902</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
