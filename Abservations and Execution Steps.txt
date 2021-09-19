@@ -9,7 +9,7 @@ Eclipse IDE for development.
 Steps to execute:
 -----------------
 Pre-requis: Maven/Java need to be installed on local PC, for running the code/test
-1. Clone the project using https://github.com/SivaKumarappa/travelporthotel.git
+1. Clone the project using https://github.com/SivaKumarappa/Schiphol.git
 2. go to downloaded Project root folder, make sure once you cd into that folder you can see pom.xml file
 3.Give commond: mvn install verify
 4. It will /install/compile/test the code and generates the reports(HTML/JSON/CUCUMBER). 
